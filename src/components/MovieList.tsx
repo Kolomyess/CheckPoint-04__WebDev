@@ -3,24 +3,23 @@ import MovieCard from "./MovieCard";
 interface Movie {
   id: number;
   title: string;
-  year: number;
-  image: string;
+  poster_path: string | null;
+  vote_average: number;
+  release_date: string;
 }
 
-interface Props {
+interface MovieListProps {
   movies: Movie[];
 }
 
-export default function MovieList({ movies }: Props) {
+export default function MovieList({ movies }: MovieListProps) {
+  if (!movies.length)
+    return <p className="text-center text-gray-400 mt-10">Nenhum filme encontrado 😢</p>;
+
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <div className="grid gap-6 p-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
       {movies.map((movie) => (
-        <MovieCard
-          key={movie.id}
-          title={movie.title}
-          year={movie.year}
-          image={movie.image}
-        />
+        <MovieCard key={movie.id} movie={movie} />
       ))}
     </div>
   );

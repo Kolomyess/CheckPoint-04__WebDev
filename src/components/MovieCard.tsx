@@ -1,16 +1,29 @@
-interface Props {
+interface Movie {
+  id: number;
   title: string;
-  year: number;
-  image: string;
+  poster_path: string | null;
+  vote_average: number;
+  release_date: string;
 }
 
-export default function MovieCard({ title, year, image }: Props) {
+interface MovieCardProps {
+  movie: Movie;
+}
+
+export default function MovieCard({ movie }: MovieCardProps) {
+  const imageBase = "https://image.tmdb.org/t/p/w500";
   return (
-    <div className="bg-white shadow-md rounded-2xl overflow-hidden hover:scale-105 transition-transform">
-      <img src={image} alt={title} className="w-full h-64 object-cover" />
-      <div className="p-4">
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <p className="text-gray-600">Ano: {year}</p>
+    <div className="bg-gray-800 text-white rounded-2xl overflow-hidden shadow-md hover:scale-105 transition-transform">
+      <img
+        src={movie.poster_path ? imageBase + movie.poster_path : "/no-poster.png"}
+        alt={movie.title}
+        className="w-full h-80 object-cover"
+      />
+      <div className="p-4 flex flex-col justify-between h-32">
+        <h2 className="text-lg font-bold truncate">{movie.title}</h2>
+        <p className="text-sm text-gray-400">
+          ⭐ {movie.vote_average.toFixed(1)} | 📅 {movie.release_date?.slice(0, 4)}
+        </p>
       </div>
     </div>
   );
