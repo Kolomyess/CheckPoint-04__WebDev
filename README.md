@@ -75,8 +75,8 @@ Criação de um **catálogo de filmes** consumindo dados diretamente da **API do
 
 ---
 ## 🔗 API utilizada
-    TMDB (The Movie Database)
-    📍 https://developer.themoviedb.org/
+TMDB (The Movie Database)
+📍 https://developer.themoviedb.org/
 
     import axios from "axios";
 
