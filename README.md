@@ -1,75 +1,148 @@
-# Integrantes
-Henrique Kolomyes Silveira | RM563467
+# 👥 Integrantes
+    Nome	| RM
+    Henrique Kolomyes Silveira	RM563467
+    Matheus Santos de Oliveira	RM561982
 
-Matheus Santos de Oliveira | RM561982
+<div align="center">
+
+# 🎬 Mini Catálogo de Filmes com API (TMDB)
+### React + TypeScript + Tailwind CSS  
+**CheckPoint 04 & 05 — Web Development**
 
 
-# React + TypeScript + Vite
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📖 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Este repositório reúne os projetos dos **CheckPoints 04 e 05** da disciplina de **Desenvolvimento Web**.
 
-## Expanding the ESLint configuration
+O foco é consolidar conhecimentos em **React com TypeScript**, evoluindo de conceitos básicos para intermediários — com destaque na **integração com APIs**, **reutilização de componentes** e **estilização moderna com Tailwind CSS**.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 CheckPoint 05 — React Intermediário e Integração com APIs
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🎯 Objetivo
+Aprofundar o uso do React com TypeScript, introduzindo:
+- Comunicação com **APIs externas** (`fetch` ou `axios`);
+- **Renderização condicional** e **listas dinâmicas**;
+- **Hooks avançados** (`useState`, `useEffect`);
+- **Organização modular** de componentes e pastas;
+- Estilização **responsiva e moderna** com Tailwind CSS.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
+---
+
+## 🧩 Projeto Didático — “Mini Catálogo de Filmes”
+
+### 📝 Descrição
+Criação de um **catálogo de filmes** consumindo dados diretamente da **API do TMDB (The Movie Database)**, exibindo uma lista com **filmes populares**, **busca por título**, e **cards responsivos** com informações básicas.
+
+### 💡 Funcionalidades
+- 🔍 **Busca por título** de filmes;  
+- 🎬 **Cards dinâmicos** com pôster, título e data de lançamento;  
+- 📡 **Consumo da API TMDB** via Axios;  
+- 📱 **Layout responsivo**, adaptado para mobile e desktop;  
+- 🧱 Estrutura modular e componentizada com **TypeScript**.
+
+---
+
+## 🧠 Conceitos Técnicos Aplicados
+
+| Conceito | Descrição |
+|-----------|------------|
+| ⚛️ **Componentes & Props** | Reutilização e tipagem forte |
+| 🎣 **Hooks (useState / useEffect)** | Controle de estado e ciclo de vida |
+| 🧩 **Renderização condicional** | Exibição dinâmica baseada em estado |
+| 🧮 **Listagem (map)** | Renderização iterativa de filmes |
+| 📁 **Estrutura organizada** | Separação em `components`, `pages`, `services` |
+| 🎨 **Tailwind CSS** | Estilização rápida e responsiva |
+| 🌐 **API TMDB** | Comunicação com base de dados real de filmes |
+| 🧱 **TypeScript** | Tipagem estática e código mais seguro |
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+| Tecnologia | Finalidade |
+|-------------|-------------|
+| ⚛️ **React + TypeScript (Vite)** | Framework principal com tipagem |
+| 🎨 **Tailwind CSS** | Estilização e responsividade |
+| 🌐 **Axios** | Consumo da API TMDB |
+| 🧰 **Node.js / npm** | Gerenciamento de dependências |
+| 🧩 **TMDB API** | Fonte de dados dos filmes |
+
+---
+## 🔗 API utilizada
+    TMDB (The Movie Database)
+    📍 https://developer.themoviedb.org/
+
+    import axios from "axios";
+
+    const API_KEY = "981168ce8d9dcd0d06f9602de23db87e";
+
+    const api = axios.create({
+      baseURL: "https://api.themoviedb.org/3",
+      params: {
+        api_key: API_KEY,
       },
-      // other options...
-    },
-  },
-])
-```
+    });
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    export default api;
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Como Executar o Projeto
+    Clone o repositório
+    git clone https://github.com/Kolomyess/CheckPoint-04__WebDev.git
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+    Acesse a pasta
+    cd CheckPoint-04__WebDev
+
+    Instale as dependências
+    npm install tailwindcss @tailwindcss/vite
+    npm install axios
+    npm install -D tailwindcss postcss autoprefixer
+    npx tailwindcss init -p
+
+    Execute o servidor local
+    npm run dev
+
+
+    O projeto será iniciado em:
+    👉 http://localhost:5173
+
+## 🧱 Boas Práticas Adotadas
+
+Código limpo e comentado 🧼
+
+Componentização e reutilização 📦
+
+Responsividade mobile-first 📱
+
+Separação lógica de camadas (UI, dados, API) 🧩
+
+Organização de pastas seguindo padrão Clean React Structure 📁
+
+## 🗂️ Estrutura de Pastas
+
+```bash
+src/
+├── components/
+│   ├── Header.tsx
+│   ├── MovieCard.tsx
+│   └── MovieList.tsx
+├── pages/
+│   └── Home.tsx
+├── services/
+│   └── api.ts
+├── App.tsx
+└── main.tsx
+
+Componente	Função
+App.tsx	Controla o estado global e renderiza a aplicação
+Header.tsx	Contém a barra de busca e o título
+MovieList.tsx	Renderiza a lista de filmes
+MovieCard.tsx	Exibe informações individuais de um filme
+api.ts	Centraliza o consumo da API do TMDB
+
+
