@@ -113,15 +113,15 @@ TMDB (The Movie Database)
 
 ## 🧱 Boas Práticas Adotadas
 
-Código limpo e comentado 🧼
+• Código limpo e comentado 🧼
 
-Componentização e reutilização 📦
+• Componentização e reutilização 📦
 
-Responsividade mobile-first 📱
+• Responsividade mobile-first 📱
 
-Separação lógica de camadas (UI, dados, API) 🧩
+• Separação lógica de camadas (UI, dados, API) 🧩
 
-Organização de pastas seguindo padrão Clean React Structure 📁
+• Organização de pastas seguindo padrão Clean React Structure 📁
 
 ## 🗂️ Estrutura de Pastas
 
