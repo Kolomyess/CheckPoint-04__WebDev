@@ -53,40 +53,38 @@ export default function Home() {
   };
 
   return (
-    <div className="p-6 max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4 text-center">
-        🎬 Lista de Filmes
-      </h1>
+    <div className="p-6 max-w-4xl mx-auto text-white">
+      <h1 className="text-4xl font-extrabold mb-6 text-center">🎬 Filmes em Cartaz</h1>
 
       {/* Formulário */}
       <form
         onSubmit={handleAddMovie}
-        className="mb-6 flex flex-col gap-3 bg-white p-4 rounded-xl shadow"
+        className="mb-6 flex flex-col gap-3 form-card"
       >
         <input
           type="text"
           placeholder="Título do filme"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 rounded bg-gray-800 text-white"
         />
         <input
           type="number"
           placeholder="Ano de lançamento"
           value={year}
           onChange={(e) => setYear(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 rounded bg-gray-800 text-white"
         />
         <input
           type="text"
           placeholder="URL da imagem"
           value={image}
           onChange={(e) => setImage(e.target.value)}
-          className="border p-2 rounded"
+          className="border p-2 rounded bg-gray-800 text-white"
         />
         <button
           type="submit"
-          className="bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          className="bg-yellow-400 text-black py-2 rounded hover:bg-yellow-500 font-semibold"
         >
           Adicionar Filme
         </button>

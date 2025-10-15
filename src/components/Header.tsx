@@ -15,8 +15,8 @@ export default function Header({ onSearch }: HeaderProps) {
   return (
     <header className="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
       <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
-        <h1 className="text-2xl font-bold tracking-wide text-yellow-400">
-          🎬 CineFiap
+        <h1 className="text-2xl font-bold tracking-wide">
+          <a href="/" className="header-logo">🎬 CineFiap</a>
         </h1>
 
         <form onSubmit={handleSubmit} className="flex gap-2">

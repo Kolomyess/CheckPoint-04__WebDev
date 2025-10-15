@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Dark theme defaults and safe fallbacks in case Tailwind isn't processed */
+:root {
+	--bg: #0f1724; /* slate-900 */
+	--card: #0b1220; /* slightly lighter */
+	--muted: #94a3b8; /* slate-400 */
+	--accent: #facc15; /* amber-400 */
+}
+
+html, body, #root {
+	height: 100%;
+	background-color: var(--bg);
+	color: white;
+}
+
+/* Basic component fallbacks — used by components when Tailwind classes aren't available */
+.movie-grid {
+	display: grid;
+	gap: 1.5rem;
+	padding: 1.5rem;
+	grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+.movie-card {
+	background: var(--card);
+	color: white;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+	transition: transform .18s ease-in-out;
+}
+.movie-card:hover { transform: scale(1.03); }
+
+.movie-card-media { background: #071025; display:block; width:100%; height:20rem; }
+.movie-card-img { width:100%; height:100%; object-fit: contain; display:block; }
+
+.header-logo { color: var(--accent); text-decoration: none; }
+.header-logo:visited { color: var(--accent); }
+
+.form-card { background: #071425; padding: 1rem; border-radius: .75rem; }
+
