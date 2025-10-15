@@ -2,10 +2,10 @@
     Nome	| RM
     Henrique Kolomyes Silveira	RM563467
     Matheus Santos de Oliveira	RM561982
-
-<div align="center">
 # 🔗 Link para acesso
     https://check-point-04-web-dev-ade3.vercel.app/
+<div align="center">
+
 
 # 🎬 Mini Catálogo de Filmes com API (TMDB)
 ### React + TypeScript + Tailwind CSS  
