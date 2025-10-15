@@ -4,6 +4,8 @@
     Matheus Santos de Oliveira	RM561982
 
 <div align="center">
+# 🔗 Link para acesso
+    https://check-point-04-web-dev-ade3.vercel.app/
 
 # 🎬 Mini Catálogo de Filmes com API (TMDB)
 ### React + TypeScript + Tailwind CSS  
@@ -110,18 +112,7 @@ TMDB (The Movie Database)
 
     O projeto será iniciado em:
     👉 http://localhost:5173
-
-## 🧱 Boas Práticas Adotadas
-
-• Código limpo e comentado 🧼
-
-• Componentização e reutilização 📦
-
-• Responsividade mobile-first 📱
-
-• Separação lógica de camadas (UI, dados, API) 🧩
-
-• Organização de pastas seguindo padrão Clean React Structure 📁
+    
 
 ## 🗂️ Estrutura de Pastas
 
