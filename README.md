@@ -1,5 +1,5 @@
 # 👥 Integrantes
-    Nome	                   | RM
+    Nome	                  | RM
     Henrique Kolomyes Silveira	RM563467
     Matheus Santos de Oliveira	RM561982
 # 🔗 Link para acesso
